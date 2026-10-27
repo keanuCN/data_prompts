@@ -1,18 +1,10 @@
-# jiling.cc 图像模板提示词数据集
+# 图像模板提示词数据集
 
-批量采集 [机灵助手](https://www.jiling.cc/image-templates) 的 AI 图像生成模板：**提示词 + 效果图 + 元信息**。
+批量采集的 AI 图像生成模板：**提示词 + 效果图 + 元信息**。
 
 - 模板数：**217**（提示词提取成功率 100%）
 - 效果图：**216** 张 / 约 15.5 MB
 - 采集时间：2026-10-27
-
-## 数据来源
-
-主站 `www.jiling.cc/image-templates` 是 Vue SPA，模板正文不在公开接口里（`/api/function/list` 需登录态）。
-站方另有一个公开的静态教程站 `docs.jiling.cc`，每个模板一页，提示词以 `<pre>` 代码块直接呈现在 HTML 中，效果图是 `img.jiling.cc` 的 CDN 直链。
-
-因此本项目从 `https://docs.jiling.cc/sitemap.xml` 取全部模板页 URL，再逐页解析，并下载对应的效果图到本地。
-每个模板的 `live_url` 指回主站详情页（`https://www.jiling.cc/image-templates/<slug>`）。
 
 ## 目录结构
 
@@ -68,6 +60,3 @@ python verify.py                       # 校验完整性
 
 `perler-bead-pixel-pattern` · `pink-tsundere-portrait` · `qipao-gala`
 
-## 版权提示
-
-提示词与效果图的版权归机灵助手所有。本仓库仅作数据整理与技术研究用途，二次分发或商用前请先确认站方授权条款。
